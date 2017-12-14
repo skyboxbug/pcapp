@@ -23,4 +23,8 @@ class PagesController extends Controller
     	$title = 'Admin Page';
     	return view('pages.admin')-> with('title', $title);
     }
+    public function testingfilter(){
+    	$title = 'FilterTesting';
+    	return view('showpart.filtertest')-> with('title', $title);
+    }
 }

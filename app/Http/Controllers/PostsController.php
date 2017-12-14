@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\cpu;
 
 class PostsController extends Controller
 {
@@ -13,7 +14,8 @@ class PostsController extends Controller
      */
     public function index()
     {
-        //
+        $cpudatas = cpu::all(); 
+        return view('showpart.cpuindex')->with('cpudatas', $cpudatas);
     }
 
     /**

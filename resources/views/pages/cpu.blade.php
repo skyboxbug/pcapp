@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('content')
+@section('form')
 
 	<h1>CPU List</h1>
 	<form class="form-inline my-2 my-lg-0">
