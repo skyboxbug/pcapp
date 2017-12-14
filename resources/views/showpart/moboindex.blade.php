@@ -1,7 +1,7 @@
 @extends('layouts.table')
 
 @section('content')
-	<h1>Motherboard</h1>
+	<h1>Motherboard</h1> 
 	@if(count($cpudatas)> 0)
 			<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
 
