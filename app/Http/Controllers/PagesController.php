@@ -12,12 +12,11 @@ class PagesController extends Controller
     }
 
     public function about(){
-    	$title = 'About';
-    	return view('pages.about')-> with('title', $title);
-    }
-    public function cpu(){
-    	$title = 'Pick a CPU';
-    	return view('pages.cpu')-> with('title', $title);
+    	$data = array(
+            'title' => 'About this Project',
+            'body' => 'This is a PBO Project'
+        );
+    	return view('pages.about')-> with($data);
     }
     public function admin(){
     	$title = 'Admin Page';

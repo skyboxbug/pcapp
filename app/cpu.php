@@ -5,7 +5,7 @@ namespace App;
 use Illuminate\Database\Eloquent\Model;
 
 class cpu extends Model
-{
+{ 
     //Table Name
     protected $table = 'posts';
     //Primary Key

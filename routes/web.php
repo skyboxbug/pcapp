@@ -13,7 +13,6 @@
 
 Route::get('/', 'PagesController@home');
 Route::get('/about', 'PagesController@about');
-Route::get('/cpu', 'PagesController@cpu');
 Route::get('/admin', 'PagesController@admin');
 Route::get('/filter', 'PagesController@testingfilter');
 
