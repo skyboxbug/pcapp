@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 class PagesController extends Controller
 {
     public function home(){
-    	$title = 'Home';
+    	$title = 'Home'; 
     	return view('pages.home')-> with('title', $title);
     }
 
