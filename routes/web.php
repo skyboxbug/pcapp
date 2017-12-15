@@ -17,4 +17,4 @@ Route::get('/admin', 'PagesController@admin');
 Route::get('/filter', 'PagesController@testingfilter');
 
 Route::resource('index/cpu', 'PostsController');
-Route::resource('index/mobo', 'PostsController');
+Route::resource('index/mobo', 'MoboController');

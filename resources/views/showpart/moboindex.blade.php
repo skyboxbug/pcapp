@@ -2,7 +2,7 @@
 
 @section('content')
 	<h1>Motherboard</h1> 
-	@if(count($cpudatas)> 0)
+	@if(count($mobodatas)> 0)
 			<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
 
 			<table id="myTable">
@@ -21,12 +21,12 @@
 				>Price</th>
 				<th>Add Item</th>
 			  </tr>
-			@foreach($cpudatas as $cpudata)
+			@foreach($mobodatas as $mobodatas)
 			  <tr class = "item">
-			    <td>{{$cpudata->name}} <br>	</td>
-				<td>{{$cpudata->manufacturer}}</td>
-				<td>{{$cpudata->socket}}</td>
-				<td>$  {{$cpudata->price}}</td>
+			    <td>{{$mobodatas->name}} <br>	</td>
+				<td>{{$mobodatas->manufacturer}}</td>
+				<td>{{$mobodatas->socket}}</td>
+				<td>$  {{$mobodatas->price}}</td>
 				<td><a href="" class = "btn btn-primary">ADD</a></td>	
 			  </tr>
 			@endforeach
