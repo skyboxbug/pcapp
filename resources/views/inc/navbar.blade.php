@@ -15,7 +15,7 @@
             <li><a href="/about">About</a></li>
             <li><a href="/services">Services</a></li>
             <li><a href="/posts">Blog</a></li>
-            <li><a href="/devs">Devs</a></li>
+            <li>  </li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
               <li><a href="/posts/create">Start New Build</a></li>
