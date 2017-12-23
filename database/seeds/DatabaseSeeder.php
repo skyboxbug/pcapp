@@ -1,6 +1,9 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use App\cpu;
+use App\cooler;
+use App\mobo;
 
 class DatabaseSeeder extends Seeder
 {

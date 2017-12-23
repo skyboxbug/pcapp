@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateMobosTable extends Migration
+class CreateCoolersTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,12 @@ class CreateMobosTable extends Migration
      */
     public function up()
     {
-        Schema::create('mobos', function (Blueprint $table) {
+        Schema::create('coolers', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name');
             $table->string('manufacturer');
-            $table->string('socket');
+            $table->string('rpm');
+            $table->string('noise');
             $table->string('outputname');
             $table->double('price', 10, 2);
             $table->timestamps();
@@ -31,6 +32,6 @@ class CreateMobosTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('mobos');
+        Schema::dropIfExists('coolers');
     }
 }

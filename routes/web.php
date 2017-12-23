@@ -14,7 +14,7 @@
 Route::get('/', 'PagesController@home');
 Route::get('/about', 'PagesController@about');
 Route::get('/admin', 'PagesController@admin');
-Route::get('/filter', 'PagesController@testingfilter');
 
 Route::resource('index/cpu', 'PostsController');
 Route::resource('index/mobo', 'MoboController');
+Route::resource('index/cooler', 'CoolerController');

@@ -28,9 +28,11 @@
 				<td>{{$cpudata->socket}}</td>
 				<td>$  {{$cpudata->price}}</td>
 				<td><a href="" class = "btn btn-primary">ADD</a></td>	
+			  {{--  --}}
 			  </tr>
 			@endforeach
 			</table>
+			
 			
 			<script>
 			function myFunction() {
@@ -59,6 +61,7 @@
 
 
 
+{{-- IGNORE BELOW - EXPERIMENTAL --}}
 
 {{-- @foreach($cpudatas as $cpudata)
 			<div class = "well">

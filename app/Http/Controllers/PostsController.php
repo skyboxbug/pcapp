@@ -15,7 +15,7 @@ class PostsController extends Controller
     public function index()
     {
         $cpudatas = cpu::all(); 
-        return view('showpart.cpuindex')->with('cpudatas', $cpudatas);
+        return view('index.cpuindex')->with('cpudatas', $cpudatas);
     }
 
     /**

@@ -3,9 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\mobo;
+use App\cooler;
 
-class MoboController extends Controller
+class CoolerController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,8 +14,8 @@ class MoboController extends Controller
      */
     public function index()
     {
-        $mobodatas = mobo::all(); 
-        return view('index.moboindex')->with('mobodatas', $mobodatas);
+        $coolerdatas = cooler::all(); 
+        return view('index.coolerindex')->with('coolerdatas', $coolerdatas);
     }
 
     /**
