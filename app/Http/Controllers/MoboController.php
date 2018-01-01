@@ -18,6 +18,15 @@ class MoboController extends Controller
         return view('index.moboindex')->with('mobodatas', $mobodatas);
     }
 
+    // This function is called when you press the "Add button"
+    public function add(Request $request, $id) {
+        // dd($name);
+        // return view('pages.home')-> with('title', $title);
+        $title = 'Home'; 
+        $mobo = mobo::find($id);
+        return view('pages.home', ['title' => $title, 'mobo' => $mobo]);
+    }
+
     /**
      * Show the form for creating a new resource.
      *

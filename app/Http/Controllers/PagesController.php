@@ -17,6 +17,11 @@ class PagesController extends Controller
         );
     	return view('pages.about')-> with($data);
     }
+
+    public function add(Request $request, $id){
+        dd($id);
+    }
+
     public function admin(){
     	$title = 'Admin Page';
     	return view('pages.admin')-> with('title', $title);

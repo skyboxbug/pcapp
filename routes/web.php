@@ -18,3 +18,5 @@ Route::get('/admin', 'PagesController@admin');
 Route::resource('index/cpu', 'PostsController');
 Route::resource('index/mobo', 'MoboController');
 Route::resource('index/cooler', 'CoolerController');
+
+Route::post('/index/mobo/{id}/add', 'MoboController@add')->name('moboAdd');

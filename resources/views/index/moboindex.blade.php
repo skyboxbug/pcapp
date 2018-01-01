@@ -27,7 +27,12 @@
 				<td>{{$mobodatas->manufacturer}}</td>
 				<td>{{$mobodatas->socket}}</td>
 				<td>$  {{$mobodatas->price}}</td>
-				<td><a href="" class = "btn btn-primary">ADD</a></td>	
+				<td>
+					<form method="POST" action="{{route('moboAdd', ['name' => $mobodatas->id])}}">
+	                    {{ csrf_field() }}
+			            <button type="submit" class="btn btn-primary">Add</button>
+			        </form>
+				</td>	
 			  </tr>
 			@endforeach
 			</table>

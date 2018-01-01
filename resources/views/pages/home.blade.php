@@ -22,7 +22,11 @@
 		<td><a href="" class = "btn btn-danger">Delete Entry</a></td>
 	</tr>
 	<tr id="mobo" class="item">
-		<td>Motherboard</td>
+		@if (empty($mobo))
+			<td>Motherboard</td>
+		@else
+			<td>{{ $mobo['name'] }}</td>
+		@endif
 		<td><a href="index/mobo" class = "btn btn-primary">Add Motherboard</a></td>
 		<td></td>
 		<td><a href="" class = "btn btn-danger">Delete Entry</a></td>
