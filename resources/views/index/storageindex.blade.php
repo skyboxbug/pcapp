@@ -1,8 +1,8 @@
 @extends('layouts.table')
 
 @section('content')
-	<h1>Optical Drive</h1> 
-	@if(count($opticaldrivedatas)> 0)
+	<h1>Storage</h1> 
+	@if(count($storagedatas)> 0)
 			<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
 
 			<table id="myTable">
@@ -13,26 +13,26 @@
 				<th id = "manufacturer"
 					onclick="w3.sortHTML('#myTable', '.item', 'td:nth-child(1)')" style="cursor:pointer">
 				Manufacturer</th>
-				<th id = "dvd" 
+				<th id = "socket" 
 					onclick="w3.sortHTML('#myTable', '.item', 'td:nth-child(1)')" style="cursor:pointer">
-				DVD Write</th>
+				Socket</th>
 				<th id = "price" 
 					onclick="w3.sortHTML('#myTable', '.item', 'td:nth-child(1)')" style="cursor:pointer"
 				>Price</th>
 				<th>Add Item</th>
 			  </tr>
-			@foreach($opticaldrivedatas as $opticaldrivedatas)
+			@foreach($storagedatas as $storagedatas)
 			  <tr class = "item">
-			    <td>{{$opticaldrivedatas->name}} <br>	</td>
-				<td>{{$opticaldrivedatas->manufacturer}}</td>
-				<td>{{$opticaldrivedatas->dvd}}</td>
-				<td>$  {{$opticaldrivedatas->price}}</td>
+			    <td>{{$storagedatas->name}} <br>	</td>
+				<td>{{$storagedatas->manufacturer}}</td>
+				<td>{{$storagedatas->size}}</td>
+				<td>$  {{$storagedatas->price}}</td>
 				<td>
-					<form method="POST" action="{{route('opticaldriverAdd', ['name' => $opticaldrivedatas->id])}}">
+					<form method="POST" action="{{route('storageAdd', ['name' => $storagedatas->id])}}">
 	                    {{ csrf_field() }}
 			            <button type="submit" class="btn btn-primary">Add</button>
 			        </form>
-				</td>
+				</td>	
 			  </tr>
 			@endforeach
 			</table>

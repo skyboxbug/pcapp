@@ -4,10 +4,10 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class opticaldrive extends Model
+class ram extends Model
 {
-    //Table Name 
-    protected $table = 'opticaldrives';
+    //Table Name
+    protected $table = 'rams';
     //Primary Key
     public $primarykey = 'id';
     //Timestamps

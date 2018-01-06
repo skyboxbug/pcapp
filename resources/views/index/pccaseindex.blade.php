@@ -27,7 +27,12 @@
 				<td>{{$pccasedatas->manufacturer}}</td>
 				<td>{{$pccasedatas->type}}</td>
 				<td>$  {{$pccasedatas->price}}</td>
-				<td><a href="" class = "btn btn-primary">ADD</a></td>	
+				<td>
+					<form method="POST" action="{{route('caseAdd', ['name' => $pccasedatas->id])}}">
+	                    {{ csrf_field() }}
+			            <button type="submit" class="btn btn-primary">Add</button>
+			        </form>
+				</td>
 			  </tr>
 			@endforeach
 			</table>

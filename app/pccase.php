@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class pccase extends Model
 {
     //Table Name 
-    protected $table = 'pccase';
+    protected $table = 'pccases';
     //Primary Key
     public $primarykey = 'id';
     //Timestamps

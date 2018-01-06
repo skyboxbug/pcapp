@@ -14,8 +14,17 @@ class OpticalDriveController extends Controller
      */
     public function index()
     {
-        $opticaldatas = opticaldrive::all(); 
-        return view('index.opticaldriveindex')->with('opticaldatas', $opticaldatas);
+        $opticaldrivedatas = opticaldrive::all(); 
+        return view('index.opticaldriveindex')->with('opticaldrivedatas', $opticaldrivedatas);
+    }
+
+    // This function is called when you press the "Add button"
+    public function add(Request $request, $id) {
+        // dd($name);
+        // return view('pages.home')-> with('title', $title);
+        $title = 'Home'; 
+        $opticaldrive = opticaldrive::find($id);
+        return view('pages.home', ['title' => $title, 'opticaldrive' => $opticaldrive]);
     }
 
     /**

@@ -31,11 +31,15 @@
 			  <tr class = "item">
 			    <td>{{$psudatas->name}} <br>	</td>
 				<td>{{$psudatas->manufacturer}}</td>
-				<td>{{$psudatas->form}}</td>
 				<td>{{$psudatas->watts}}</td>
-				<td>{{$psudatas->modular}}</td>
+				<td>{{$psudatas->modularity}}</td>
 				<td>$  {{$psudatas->price}}</td>
-				<td><a href="" class = "btn btn-primary">ADD</a></td>	
+				<td>
+					<form method="POST" action="{{route('psuAdd', ['name' => $psudatas->id])}}">
+	                    {{ csrf_field() }}
+			            <button type="submit" class="btn btn-primary">Add</button>
+			        </form>
+				</td>
 			  </tr>
 			@endforeach
 			</table>

@@ -18,6 +18,14 @@ class CoolerController extends Controller
         return view('index.coolerindex')->with('coolerdatas', $coolerdatas);
     }
 
+        // This function is called when you press the "Add button"
+    public function add(Request $request, $id) {
+        // dd($name);
+        // return view('pages.home')-> with('title', $title);
+        $title = 'Home'; 
+        $cooler = cooler::find($id);
+        return view('pages.home', ['title' => $title, 'cooler' => $cooler]);
+    }
     /**
      * Show the form for creating a new resource.
      *

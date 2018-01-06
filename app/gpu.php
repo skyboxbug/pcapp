@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class gpu extends Model
 {
     //Table Name 
-    protected $table = 'gpu';
+    protected $table = 'gpus';
     //Primary Key
     public $primarykey = 'id';
     //Timestamps

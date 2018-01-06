@@ -3,9 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\cpu;
+use App\ram;
 
-class PostsController extends Controller
+class RamController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,15 +14,17 @@ class PostsController extends Controller
      */
     public function index()
     {
-        $cpudatas = cpu::all(); 
-        return view('index.cpuindex')->with('cpudatas', $cpudatas);
+        $ramdatas = ram::all(); 
+        return view('index.ramindex')->with('ramdatas', $ramdatas);
     }
 
+    // This function is called when you press the "Add button"
     public function add(Request $request, $id) {
         $title = 'Home'; 
-        $cpu = cpu::find($id);
-        return view('pages.home', ['title' => $title, 'cpu' => $cpu]);
+        $ram = ram::find($id);
+        return view('pages.home', ['title' => $title, 'ram' => $ram]);
     }
+
     /**
      * Show the form for creating a new resource.
      *

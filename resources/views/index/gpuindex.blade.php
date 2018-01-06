@@ -31,7 +31,12 @@
 				<td>{{$gpudatas->memory}}</td>
 				<td>{{$gpudatas->clockspeed}}</td>
 				<td>$  {{$gpudatas->price}}</td>
-				<td><a href="" class = "btn btn-primary">ADD</a></td>	
+				<td>
+					<form method="POST" action="{{route('gpuAdd', ['name' => $gpudatas->id])}}">
+	                    {{ csrf_field() }}
+			            <button type="submit" class="btn btn-primary">Add</button>
+			        </form>
+				</td>
 			  </tr>
 			@endforeach
 			</table>

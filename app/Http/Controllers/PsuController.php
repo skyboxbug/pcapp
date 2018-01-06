@@ -18,6 +18,11 @@ class PsuController extends Controller
         return view('index.psuindex')->with('psudatas', $psudatas);
     }
 
+    public function add(Request $request, $id) {
+        $title = 'Home'; 
+        $psu = psu::find($id);
+        return view('pages.home', ['title' => $title, 'psu' => $psu]);
+    }
     /**
      * Show the form for creating a new resource.
      *
