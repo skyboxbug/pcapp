@@ -1,8 +1,8 @@
 @extends('layouts.table')
 
 @section('content')
-	<h1>Cooler</h1> 
-	@if(count($coolerdatas)> 0)
+	<h1>Power Supply</h1> 
+	@if(count($psudatas)> 0)
 			<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
 
 			<table id="myTable">
@@ -13,24 +13,28 @@
 				<th id = "manufacturer"
 					onclick="w3.sortHTML('#myTable', '.item', 'td:nth-child(1)')" style="cursor:pointer">
 				Manufacturer</th>
-				<th id = "rpm" 
+				<th id = "form" 
 					onclick="w3.sortHTML('#myTable', '.item', 'td:nth-child(1)')" style="cursor:pointer">
-				RPM</th>
-				<th id = "noise" 
+				Form</th>
+				<th id = "watts" 
 					onclick="w3.sortHTML('#myTable', '.item', 'td:nth-child(1)')" style="cursor:pointer">
-				Noise</th>
+				Watts</th>
+				<th id = "modular" 
+					onclick="w3.sortHTML('#myTable', '.item', 'td:nth-child(1)')" style="cursor:pointer">
+				Modular</th>
 				<th id = "price" 
 					onclick="w3.sortHTML('#myTable', '.item', 'td:nth-child(1)')" style="cursor:pointer"
 				>Price</th>
 				<th>Add Item</th>
 			  </tr>
-			@foreach($coolerdatas as $coolerdatas)
+			@foreach($psudatas as $psudatas)
 			  <tr class = "item">
-			    <td>{{$coolerdatas->name}} <br>	</td>
-				<td>{{$coolerdatas->manufacturer}}</td>
-				<td>{{$coolerdatas->rpm}}</td>
-				<td>{{$coolerdatas->noise}}</td>
-				<td>$  {{$coolerdatas->price}}</td>
+			    <td>{{$psudatas->name}} <br>	</td>
+				<td>{{$psudatas->manufacturer}}</td>
+				<td>{{$psudatas->form}}</td>
+				<td>{{$psudatas->watts}}</td>
+				<td>{{$psudatas->modular}}</td>
+				<td>$  {{$psudatas->price}}</td>
 				<td><a href="" class = "btn btn-primary">ADD</a></td>	
 			  </tr>
 			@endforeach

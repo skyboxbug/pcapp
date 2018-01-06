@@ -45,25 +45,25 @@
 	</tr>
 	<tr id="gpu" class="item">
 		<td>Video Card</td>
-		<td><a href="" class = "btn btn-primary">Add Video Card</a></td>
+		<td><a href="index/gpu" class = "btn btn-primary">Add Video Card</a></td>
 		<td></td>
 		<td><a href="" class = "btn btn-danger">Delete Entry</a></td>
 	</tr>
 	<tr id="case" class="item">
 		<td>PC Case</td>
-		<td><a href="" class = "btn btn-primary">Add Case</a></td>
+		<td><a href="index/pccase" class = "btn btn-primary">Add Case</a></td>
 		<td></td>
 		<td><a href="" class = "btn btn-danger">Delete Entry</a></td>
 	</tr>
 	<tr id="psu" class="item">
 		<td>Power Supply</td>
-		<td><a href="" class = "btn btn-primary">Add Power Supply</a></td>
+		<td><a href="index/psu" class = "btn btn-primary">Add Power Supply</a></td>
 		<td></td>
 		<td><a href="" class = "btn btn-danger">Delete Entry</a></td>
 	</tr>
 	<tr id="opticaldrive" class="item">
 		<td>Opitcal Drive</td>
-		<td><a href="" class = "btn btn-primary">Add Optical Drive</a></td>
+		<td><a href="index/opticaldrive" class = "btn btn-primary">Add Optical Drive</a></td>
 		<td></td>
 		<td><a href="" class = "btn btn-danger">Delete Entry</a></td>
 	</tr>
@@ -81,7 +81,7 @@
   <a href="/index/cooler" class="list-group-item">Add Cooler</a>
   <a href="/index/mobo" class="list-group-item">Add Motherboard</a>
   <a href="/index/ram" class="list-group-item">Add RAM</a>
-  <a href="/index/mobo" class="list-group-item">Add Motherboard</a>
+  <a href="/index/gpu" class="list-group-item">Add Video Card</a>
   <a href="/index/mobo" class="list-group-item">Add Motherboard</a>
   
 </div>
