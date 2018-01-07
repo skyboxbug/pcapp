@@ -9,61 +9,104 @@
 		<th>Price</th>
 		<th>Options</th>
 	</tr>
+
 	<tr id="cpu" class="item">
-		<td>CPU</td>
-		<td><a href="{{route('cpu.index')}}" class = "btn btn-primary">Add CPU</a></td>
+
+		@if (empty($cpu))
+			<td>CPU</td>
+			<td><a href="{{route('cpu.index')}}" class = "btn btn-primary">Add CPU</a></td>
+		@else
+			<td>{{ $cpu['name'] }}</td>
+		@endif
 		<td></td>
 		<td><a href="" class = "btn btn-danger">Delete Entry</a></td>
 	</tr>
+
 	<tr id="cooler" class="item">
-		<td>Cooler</td>
-		<td><a href="index/cooler" class = "btn btn-primary">Add Cooler</a></td>
+		@if (empty($cooler))
+			<td>Cooler</td>
+			<td><a href="index/cooler" class = "btn btn-primary">Add Cooler</a></td>
+		@else
+			<td>{{ $cooler['name'] }}</td>
+		@endif
 		<td></td>
 		<td><a href="" class = "btn btn-danger">Delete Entry</a></td>
 	</tr>
+
 	<tr id="mobo" class="item">
 		@if (empty($mobo))
 			<td>Motherboard</td>
+			<td><a href="{{route('mobo.index')}}" class = "btn btn-primary">Add Motherboard</a></td>
 		@else
 			<td>{{ $mobo['name'] }}</td>
 		@endif
-		<td><a href={{route('mobo.index')}} class = "btn btn-primary">Add Motherboard</a></td>
 		<td></td>
 		<td><a href="" class = "btn btn-danger">Delete Entry</a></td>
 	</tr>
+
 	<tr id="ram" class="item">
-		<td>RAM</td>
-		<td><a href="" class = "btn btn-primary">Add RAM</a></td>
+		@if (empty($ram))
+			<td>RAM</td>
+			<td><a href="index/ram" class = "btn btn-primary">Add RAM</a></td>
+		@else
+			<td>{{ $ram['name'] }}</td>
+		@endif
 		<td></td>
 		<td><a href="" class = "btn btn-danger">Delete Entry</a></td>
 	</tr>
+
 	<tr id="storage" class="item">
-		<td>Storage</td>
-		<td><a href="" class = "btn btn-primary">Add Storage</a></td>
+		@if (empty($storage))
+			<td>Storage</td>
+			<td><a href="index/storage" class = "btn btn-primary">Add Storage</a></td>
+		@else
+			<td>{{ $storage['name'] }}</td>
+		@endif
 		<td></td>
 		<td><a href="" class = "btn btn-danger">Delete Entry</a></td>
 	</tr>
+
 	<tr id="gpu" class="item">
-		<td>Video Card</td>
-		<td><a href="" class = "btn btn-primary">Add Video Card</a></td>
+		@if (empty($gpu))
+			<td>GPU</td>
+			<td><a href="index/gpu" class = "btn btn-primary">Add GPU</a></td>
+		@else
+			<td>{{ $gpu['name'] }}</td>
+		@endif
 		<td></td>
 		<td><a href="" class = "btn btn-danger">Delete Entry</a></td>
 	</tr>
+
 	<tr id="case" class="item">
-		<td>PC Case</td>
-		<td><a href="" class = "btn btn-primary">Add Case</a></td>
+		@if (empty($case))
+			<td>PC Case</td>
+			<td><a href="index/case" class = "btn btn-primary">Add PC Case</a></td>
+		@else
+			<td>{{ $case['name'] }}</td>
+		@endif
 		<td></td>
 		<td><a href="" class = "btn btn-danger">Delete Entry</a></td>
 	</tr>
+
 	<tr id="psu" class="item">
-		<td>Power Supply</td>
-		<td><a href="" class = "btn btn-primary">Add Power Supply</a></td>
+		@if (empty($psu))
+			<td>PSU</td>
+			<td><a href="index/psu" class = "btn btn-primary">Add PSU</a></td>
+		@else
+			<td>{{ $psu['name'] }}</td>
+		@endif
 		<td></td>
 		<td><a href="" class = "btn btn-danger">Delete Entry</a></td>
 	</tr>
+
 	<tr id="opticaldrive" class="item">
-		<td>Opitcal Drive</td>
-		<td><a href="" class = "btn btn-primary">Add Optical Drive</a></td>
+		@if (empty($opticaldrive))
+			<td>Optical Drive</td>
+			<td><a href="index/opticaldrive" class = "btn btn-primary">Add Optical Drive</a></td>
+		@else
+			<td>{{ $opticaldrive['name'] }}</td>
+		@endif
+		
 		<td></td>
 		<td><a href="" class = "btn btn-danger">Delete Entry</a></td>
 	</tr>
@@ -81,7 +124,7 @@
   <a href="/index/cooler" class="list-group-item">Add Cooler</a>
   <a href="/index/mobo" class="list-group-item">Add Motherboard</a>
   <a href="/index/ram" class="list-group-item">Add RAM</a>
-  <a href="/index/mobo" class="list-group-item">Add Motherboard</a>
+  <a href="/index/gpu" class="list-group-item">Add Video Card</a>
   <a href="/index/mobo" class="list-group-item">Add Motherboard</a>
   
 </div>

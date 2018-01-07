@@ -3,9 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\cpu;
+use App\psu;
 
-class PostsController extends Controller
+class PsuController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,14 +14,14 @@ class PostsController extends Controller
      */
     public function index()
     {
-        $cpudatas = cpu::all(); 
-        return view('index.cpuindex')->with('cpudatas', $cpudatas);
+        $psudatas = psu::all(); 
+        return view('index.psuindex')->with('psudatas', $psudatas);
     }
 
     public function add(Request $request, $id) {
         $title = 'Home'; 
-        $cpu = cpu::find($id);
-        return view('pages.home', ['title' => $title, 'cpu' => $cpu]);
+        $psu = psu::find($id);
+        return view('pages.home', ['title' => $title, 'psu' => $psu]);
     }
     /**
      * Show the form for creating a new resource.

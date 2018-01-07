@@ -3,9 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\cpu;
+use App\opticaldrive;
 
-class PostsController extends Controller
+class OpticalDriveController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,15 +14,19 @@ class PostsController extends Controller
      */
     public function index()
     {
-        $cpudatas = cpu::all(); 
-        return view('index.cpuindex')->with('cpudatas', $cpudatas);
+        $opticaldrivedatas = opticaldrive::all(); 
+        return view('index.opticaldriveindex')->with('opticaldrivedatas', $opticaldrivedatas);
     }
 
+    // This function is called when you press the "Add button"
     public function add(Request $request, $id) {
+        // dd($name);
+        // return view('pages.home')-> with('title', $title);
         $title = 'Home'; 
-        $cpu = cpu::find($id);
-        return view('pages.home', ['title' => $title, 'cpu' => $cpu]);
+        $opticaldrive = opticaldrive::find($id);
+        return view('pages.home', ['title' => $title, 'opticaldrive' => $opticaldrive]);
     }
+
     /**
      * Show the form for creating a new resource.
      *

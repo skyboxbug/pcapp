@@ -1,10 +1,9 @@
 @extends('layouts.table')
 
 @section('content')
-	<h1>Cooler</h1> 
-	@if(count($coolerdatas)> 0)
+	<h1>RAM</h1> 
+	@if(count($ramdatas)> 0)
 			<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
-
 			<table id="myTable">
 			  <tr class="header">
 			    <th id = "name" 
@@ -13,25 +12,28 @@
 				<th id = "manufacturer"
 					onclick="w3.sortHTML('#myTable', '.item', 'td:nth-child(1)')" style="cursor:pointer">
 				Manufacturer</th>
-				<th id = "rpm" 
+				<th id = "socket" 
 					onclick="w3.sortHTML('#myTable', '.item', 'td:nth-child(1)')" style="cursor:pointer">
-				RPM</th>
-				<th id = "noise" 
-					onclick="w3.sortHTML('#myTable', '.item', 'td:nth-child(1)')" style="cursor:pointer">
-				Noise</th>
+				Socket</th>
 				<th id = "price" 
 					onclick="w3.sortHTML('#myTable', '.item', 'td:nth-child(1)')" style="cursor:pointer"
 				>Price</th>
 				<th>Add Item</th>
 			  </tr>
-			@foreach($coolerdatas as $coolerdatas)
+			@foreach($ramdatas as $ramdatas)
 			  <tr class = "item">
-			    <td>{{$coolerdatas->name}} <br>	</td>
-				<td>{{$coolerdatas->manufacturer}}</td>
-				<td>{{$coolerdatas->rpm}}</td>
-				<td>{{$coolerdatas->noise}}</td>
-				<td>$  {{$coolerdatas->price}}</td>
-				<td><a href="" class = "btn btn-primary">ADD</a></td>	
+			    <td>{{$ramdatas->name}} <br>	</td>
+				<td>{{$ramdatas->manufacturer}}</td>
+				<td>{{$ramdatas->slot}}</td>
+				<td>{{$ramdatas->size}}</td>
+				<td>{{$ramdatas->speed}}</td>
+				<td>$  {{$ramdatas->price}}</td>
+				<td>
+					<form method="POST" action="{{route('ramAdd', ['name' => $ramdatas->id])}}">
+	                    {{ csrf_field() }}
+			            <button type="submit" class="btn btn-primary">Add</button>
+			        </form>
+				</td>	
 			  </tr>
 			@endforeach
 			</table>

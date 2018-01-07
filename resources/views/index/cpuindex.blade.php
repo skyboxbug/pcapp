@@ -21,13 +21,18 @@
 				>Price</th>
 				<th>Add Item</th>
 			  </tr>
-			@foreach($cpudatas as $cpudata)
+			@foreach($cpudatas as $cpudatas)
 			  <tr class = "item">
-			    <td>{{$cpudata->name}} <br>	</td>
-				<td>{{$cpudata->manufacturer}}</td>
-				<td>{{$cpudata->socket}}</td>
-				<td>$  {{$cpudata->price}}</td>
-				<td><a href="" class = "btn btn-primary">ADD</a></td>	
+			    <td>{{$cpudatas->name}} <br>	</td>
+				<td>{{$cpudatas->manufacturer}}</td>
+				<td>{{$cpudatas->socket}}</td>
+				<td>$  {{$cpudatas->price}}</td>
+				<td>
+					<form method="POST" action="{{route('cpuAdd', ['name' => $cpudatas->id])}}">
+	                    {{ csrf_field() }}
+			            <button type="submit" class="btn btn-primary">Add</button>
+			        </form>
+				</td>	
 			  {{--  --}}
 			  </tr>
 			@endforeach

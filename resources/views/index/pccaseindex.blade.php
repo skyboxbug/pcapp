@@ -1,8 +1,8 @@
 @extends('layouts.table')
 
 @section('content')
-	<h1>Cooler</h1> 
-	@if(count($coolerdatas)> 0)
+	<h1>PC Case</h1> 
+	@if(count($pccasedatas)> 0)
 			<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
 
 			<table id="myTable">
@@ -13,25 +13,26 @@
 				<th id = "manufacturer"
 					onclick="w3.sortHTML('#myTable', '.item', 'td:nth-child(1)')" style="cursor:pointer">
 				Manufacturer</th>
-				<th id = "rpm" 
+				<th id = "type" 
 					onclick="w3.sortHTML('#myTable', '.item', 'td:nth-child(1)')" style="cursor:pointer">
-				RPM</th>
-				<th id = "noise" 
-					onclick="w3.sortHTML('#myTable', '.item', 'td:nth-child(1)')" style="cursor:pointer">
-				Noise</th>
+				Type</th>
 				<th id = "price" 
 					onclick="w3.sortHTML('#myTable', '.item', 'td:nth-child(1)')" style="cursor:pointer"
 				>Price</th>
 				<th>Add Item</th>
 			  </tr>
-			@foreach($coolerdatas as $coolerdatas)
+			@foreach($pccasedatas as $pccasedatas)
 			  <tr class = "item">
-			    <td>{{$coolerdatas->name}} <br>	</td>
-				<td>{{$coolerdatas->manufacturer}}</td>
-				<td>{{$coolerdatas->rpm}}</td>
-				<td>{{$coolerdatas->noise}}</td>
-				<td>$  {{$coolerdatas->price}}</td>
-				<td><a href="" class = "btn btn-primary">ADD</a></td>	
+			    <td>{{$pccasedatas->name}} <br>	</td>
+				<td>{{$pccasedatas->manufacturer}}</td>
+				<td>{{$pccasedatas->type}}</td>
+				<td>$  {{$pccasedatas->price}}</td>
+				<td>
+					<form method="POST" action="{{route('caseAdd', ['name' => $pccasedatas->id])}}">
+	                    {{ csrf_field() }}
+			            <button type="submit" class="btn btn-primary">Add</button>
+			        </form>
+				</td>
 			  </tr>
 			@endforeach
 			</table>

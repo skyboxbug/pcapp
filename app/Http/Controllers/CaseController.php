@@ -3,9 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\cpu;
+use App\pccase;
 
-class PostsController extends Controller
+class CaseController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,14 +14,17 @@ class PostsController extends Controller
      */
     public function index()
     {
-        $cpudatas = cpu::all(); 
-        return view('index.cpuindex')->with('cpudatas', $cpudatas);
+        $pccasedatas = pccase::all(); 
+        return view('index.pccaseindex')->with('pccasedatas', $pccasedatas);
     }
 
+        // This function is called when you press the "Add button"
     public function add(Request $request, $id) {
+        // dd($name);
+        // return view('pages.home')-> with('title', $title);
         $title = 'Home'; 
-        $cpu = cpu::find($id);
-        return view('pages.home', ['title' => $title, 'cpu' => $cpu]);
+        $pccase = pccase::find($id);
+        return view('pages.home', ['title' => $title, 'pccase' => $pccase]);
     }
     /**
      * Show the form for creating a new resource.
