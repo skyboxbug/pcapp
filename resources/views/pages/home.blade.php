@@ -11,7 +11,7 @@
 	</tr>
 	<tr id="cpu" class="item">
 		<td>CPU</td>
-		<td><a href="index/cpu" class = "btn btn-primary">Add CPU</a></td>
+		<td><a href="{{route('cpu.index')}}" class = "btn btn-primary">Add CPU</a></td>
 		<td></td>
 		<td><a href="" class = "btn btn-danger">Delete Entry</a></td>
 	</tr>
@@ -27,7 +27,7 @@
 		@else
 			<td>{{ $mobo['name'] }}</td>
 		@endif
-		<td><a href="index/mobo" class = "btn btn-primary">Add Motherboard</a></td>
+		<td><a href={{route('mobo.index')}} class = "btn btn-primary">Add Motherboard</a></td>
 		<td></td>
 		<td><a href="" class = "btn btn-danger">Delete Entry</a></td>
 	</tr>

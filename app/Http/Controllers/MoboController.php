@@ -24,7 +24,9 @@ class MoboController extends Controller
         // return view('pages.home')-> with('title', $title);
         $title = 'Home'; 
         $mobo = mobo::find($id);
-        return view('pages.home', ['title' => $title, 'mobo' => $mobo]);
+        // return view('pages.home', ['title' => $title, 'mobo' => $mobo]);
+        // return route()
+        return redirect()->route('modifiedHome', ['mobo' => $id, 'cpu' => 'None']);
     }
 
     /**
