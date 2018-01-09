@@ -24,7 +24,9 @@ class OpticalDriveController extends Controller
         // return view('pages.home')-> with('title', $title);
         $title = 'Home'; 
         $opticaldrive = opticaldrive::find($id);
-        return view('pages.home', ['title' => $title, 'opticaldrive' => $opticaldrive]);
+        $request->session()->put('opticaldrive', $opticaldrive);
+        $data = $request->session()->all();
+        return view('pages.home', ['title' => $title, 'data' => $data]);
     }
 
     /**

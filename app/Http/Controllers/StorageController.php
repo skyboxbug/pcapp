@@ -22,7 +22,9 @@ class StorageController extends Controller
     public function add(Request $request, $id) {
         $title = 'Home'; 
         $storage = storage::find($id);
-        return view('pages.home', ['title' => $title, 'storage' => $storage]);
+        $request->session()->put('storage', $storage);
+        $data = $request->session()->all();
+        return view('pages.home', ['title' => $title, 'data' => $data]);
     }
 
     /**

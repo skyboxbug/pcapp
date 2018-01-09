@@ -9,8 +9,9 @@ use App\cpu;
 
 class PagesController extends Controller
 {
-    public function home(){
+    public function home(Request $request){
     	$title = 'Home';
+        $request->session()->flush();
     	return view('pages.home')-> with('title', $title);
     }
     public function about(){

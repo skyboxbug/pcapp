@@ -24,7 +24,9 @@ class GpuController extends Controller
         // return view('pages.home')-> with('title', $title);
         $title = 'Home'; 
         $gpu = gpu::find($id);
-        return view('pages.home', ['title' => $title, 'gpu' => $gpu]);
+        $request->session()->put('gpu', $gpu);
+        $data = $request->session()->all();
+        return view('pages.home', ['title' => $title, 'data' => $data]);
     }
 
     /**

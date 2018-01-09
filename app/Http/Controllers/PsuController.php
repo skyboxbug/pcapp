@@ -21,7 +21,9 @@ class PsuController extends Controller
     public function add(Request $request, $id) {
         $title = 'Home'; 
         $psu = psu::find($id);
-        return view('pages.home', ['title' => $title, 'psu' => $psu]);
+        $request->session()->put('psu', $psu);
+        $data = $request->session()->all();
+        return view('pages.home', ['title' => $title, 'data' => $data]);
     }
     /**
      * Show the form for creating a new resource.

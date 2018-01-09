@@ -24,7 +24,9 @@ class CaseController extends Controller
         // return view('pages.home')-> with('title', $title);
         $title = 'Home'; 
         $pccase = pccase::find($id);
-        return view('pages.home', ['title' => $title, 'pccase' => $pccase]);
+        $request->session()->put('pccase', $pccase);
+        $data = $request->session()->all();
+        return view('pages.home', ['title' => $title, 'data' => $data]);
     }
     /**
      * Show the form for creating a new resource.

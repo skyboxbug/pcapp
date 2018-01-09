@@ -22,7 +22,9 @@ class RamController extends Controller
     public function add(Request $request, $id) {
         $title = 'Home'; 
         $ram = ram::find($id);
-        return view('pages.home', ['title' => $title, 'ram' => $ram]);
+        $request->session()->put('ram', $ram);
+        $data = $request->session()->all();
+        return view('pages.home', ['title' => $title, 'data' => $data]);
     }
 
     /**

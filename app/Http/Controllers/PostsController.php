@@ -21,7 +21,9 @@ class PostsController extends Controller
     public function add(Request $request, $id) {
         $title = 'Home'; 
         $cpu = cpu::find($id);
-        return view('pages.home', ['title' => $title, 'cpu' => $cpu]);
+        $request->session()->put('cpu', $cpu);
+        $data = $request->session()->all();
+        return view('pages.home', ['title' => $title, 'data' => $data]);
     }
     /**
      * Show the form for creating a new resource.

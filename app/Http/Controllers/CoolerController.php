@@ -24,7 +24,9 @@ class CoolerController extends Controller
         // return view('pages.home')-> with('title', $title);
         $title = 'Home'; 
         $cooler = cooler::find($id);
-        return view('pages.home', ['title' => $title, 'cooler' => $cooler]);
+        $request->session()->put('cooler', $cooler);
+        $data = $request->session()->all();
+        return view('pages.home', ['title' => $title, 'data' => $data]);
     }
     /**
      * Show the form for creating a new resource.

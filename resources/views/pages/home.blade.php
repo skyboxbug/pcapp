@@ -12,99 +12,99 @@
 
 	<tr id="cpu" class="item">
 
-		@if (empty($cpu))
+		@if (empty($data['cpu']))
 			<td>CPU</td>
 			<td><a href="{{route('cpu.index')}}" class = "btn btn-primary">Add CPU</a></td>
 		@else
-			<td>{{ $cpu['name'] }}</td>
+			<td>{{ $data['cpu']['name'] }}</td>
 		@endif
 		<td></td>
 		<td><a href="" class = "btn btn-danger">Delete Entry</a></td>
 	</tr>
 
 	<tr id="cooler" class="item">
-		@if (empty($cooler))
+		@if (empty($data['cooler']))
 			<td>Cooler</td>
 			<td><a href="index/cooler" class = "btn btn-primary">Add Cooler</a></td>
 		@else
-			<td>{{ $cooler['name'] }}</td>
+			<td>{{ $data['cooler']['name'] }}</td>
 		@endif
 		<td></td>
 		<td><a href="" class = "btn btn-danger">Delete Entry</a></td>
 	</tr>
 
 	<tr id="mobo" class="item">
-		@if (empty($mobo))
+		@if (empty($data['mobo']))
 			<td>Motherboard</td>
 			<td><a href="{{route('mobo.index')}}" class = "btn btn-primary">Add Motherboard</a></td>
 		@else
-			<td>{{ $mobo['name'] }}</td>
+			<td>{{ $data['mobo']['name'] }}</td>
 		@endif
 		<td></td>
 		<td><a href="" class = "btn btn-danger">Delete Entry</a></td>
 	</tr>
 
 	<tr id="ram" class="item">
-		@if (empty($ram))
+		@if (empty($data['ram']))
 			<td>RAM</td>
 			<td><a href="index/ram" class = "btn btn-primary">Add RAM</a></td>
 		@else
-			<td>{{ $ram['name'] }}</td>
+			<td>{{ $data['ram']['name'] }}</td>
 		@endif
 		<td></td>
 		<td><a href="" class = "btn btn-danger">Delete Entry</a></td>
 	</tr>
 
 	<tr id="storage" class="item">
-		@if (empty($storage))
+		@if (empty($data['storage']))
 			<td>Storage</td>
 			<td><a href="index/storage" class = "btn btn-primary">Add Storage</a></td>
 		@else
-			<td>{{ $storage['name'] }}</td>
+			<td>{{ $data['storage']['name'] }}</td>
 		@endif
 		<td></td>
 		<td><a href="" class = "btn btn-danger">Delete Entry</a></td>
 	</tr>
 
 	<tr id="gpu" class="item">
-		@if (empty($gpu))
+		@if (empty($data['gpu']))
 			<td>GPU</td>
 			<td><a href="index/gpu" class = "btn btn-primary">Add GPU</a></td>
 		@else
-			<td>{{ $gpu['name'] }}</td>
+			<td>{{ $data['gpu']['name'] }}</td>
 		@endif
 		<td></td>
 		<td><a href="" class = "btn btn-danger">Delete Entry</a></td>
 	</tr>
 
 	<tr id="case" class="item">
-		@if (empty($case))
+		@if (empty($data['case']))
 			<td>PC Case</td>
 			<td><a href="index/case" class = "btn btn-primary">Add PC Case</a></td>
 		@else
-			<td>{{ $case['name'] }}</td>
+			<td>{{ $data['case']['name'] }}</td>
 		@endif
 		<td></td>
 		<td><a href="" class = "btn btn-danger">Delete Entry</a></td>
 	</tr>
 
 	<tr id="psu" class="item">
-		@if (empty($psu))
+		@if (empty($data['psu']))
 			<td>PSU</td>
 			<td><a href="index/psu" class = "btn btn-primary">Add PSU</a></td>
 		@else
-			<td>{{ $psu['name'] }}</td>
+			<td>{{ $data['psu']['name'] }}</td>
 		@endif
 		<td></td>
 		<td><a href="" class = "btn btn-danger">Delete Entry</a></td>
 	</tr>
 
 	<tr id="opticaldrive" class="item">
-		@if (empty($opticaldrive))
+		@if (empty($data['opticaldrive']))
 			<td>Optical Drive</td>
 			<td><a href="index/opticaldrive" class = "btn btn-primary">Add Optical Drive</a></td>
 		@else
-			<td>{{ $opticaldrive['name'] }}</td>
+			<td>{{ $data['opticaldrive']['name'] }}</td>
 		@endif
 		
 		<td></td>
