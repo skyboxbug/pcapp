@@ -13,9 +13,6 @@
 				<th id = "manufacturer"
 					onclick="w3.sortHTML('#myTable', '.item', 'td:nth-child(1)')" style="cursor:pointer">
 				Manufacturer</th>
-				<th id = "form" 
-					onclick="w3.sortHTML('#myTable', '.item', 'td:nth-child(1)')" style="cursor:pointer">
-				Form</th>
 				<th id = "watts" 
 					onclick="w3.sortHTML('#myTable', '.item', 'td:nth-child(1)')" style="cursor:pointer">
 				Watts</th>
@@ -25,7 +22,7 @@
 				<th id = "price" 
 					onclick="w3.sortHTML('#myTable', '.item', 'td:nth-child(1)')" style="cursor:pointer"
 				>Price</th>
-				<th>Add Item</th>
+				<th></th>
 			  </tr>
 			@foreach($psudatas as $psudatas)
 			  <tr class = "item">

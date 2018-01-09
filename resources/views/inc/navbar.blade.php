@@ -16,7 +16,7 @@
             <li>  </li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
-              <li><a href="/posts/create">Start New Build</a></li>
+              <li><a href="/reset">Start New Build</a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>

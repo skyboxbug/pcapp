@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="{{asset('css/app.css')}}">
-        <script src="https://www.w3schools.com/lib/w3.js"></script>
+        <script type="text/javascript" src="{{ URL::asset('js/w3.js') }}"></script>
         <style>
             * {
               box-sizing: border-box;

@@ -18,7 +18,7 @@
 				<th id = "price" 
 					onclick="w3.sortHTML('#myTable', '.item', 'td:nth-child(1)')" style="cursor:pointer"
 				>Price</th>
-				<th>Add Item</th>
+				<th></th>
 			  </tr>
 			@foreach($ramdatas as $ramdatas)
 			  <tr class = "item">

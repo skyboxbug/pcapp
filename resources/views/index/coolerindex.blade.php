@@ -22,7 +22,7 @@
 				<th id = "price" 
 					onclick="w3.sortHTML('#myTable', '.item', 'td:nth-child(1)')" style="cursor:pointer"
 				>Price</th>
-				<th>Add Item</th>
+				<th></th>
 			  </tr>
 			@foreach($coolerdatas as $coolerdatas)
 			  <tr class = "item">
@@ -31,7 +31,12 @@
 				<td>{{$coolerdatas->rpm}}</td>
 				<td>{{$coolerdatas->noise}}</td>
 				<td>$  {{$coolerdatas->price}}</td>
-				<td><a href="" class = "btn btn-primary">ADD</a></td>	
+				<td>
+					<form method="POST" action="{{route('coolerAdd', ['name' => $coolerdatas->id])}}">
+	                    {{ csrf_field() }}
+			            <button type="submit" class="btn btn-primary">Add</button>
+			        </form>
+				</td>	
 			  </tr>
 			@endforeach
 			</table>
